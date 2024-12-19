@@ -69,7 +69,7 @@ export default function BorrowManagement() {
 
   useEffect(() => {
     fetchBorrowRecords();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   const fetchBorrowRecords = async (filterValues) => {
@@ -252,6 +252,16 @@ export default function BorrowManagement() {
           >
             <Button variant="contained" color="success">
               Xuất CSV
+            </Button>
+          </CSVLink>
+          <CSVLink
+            data={csvData.filter((record) => record.status !== "RETURNED")}
+            headers={csvHeaders}
+            filename={`sach_chua_tra_${Date.now()}.csv`}
+            style={{ textDecoration: "none" }}
+          >
+            <Button variant="contained" color="warning">
+              Xuất sách chưa trả
             </Button>
           </CSVLink>
         </Stack>
