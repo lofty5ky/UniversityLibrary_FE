@@ -90,9 +90,6 @@ export default function ViolationHistory() {
                   <TableCell align="center" sx={{ maxWidth: 50 }}>
                     STT
                   </TableCell>
-                  <TableCell align="center" sx={{ maxWidth: 150 }}>
-                    Tên sách
-                  </TableCell>
                   <TableCell align="center" sx={{ maxWidth: 80 }}>
                     Ngày vi phạm
                   </TableCell>
@@ -111,15 +108,6 @@ export default function ViolationHistory() {
                   <TableRow key={violation.id}>
                     <TableCell align="center">
                       {(page - 1) * size + index + 1}
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      sx={{
-                        maxWidth: 150,
-                        textOverflow: "ellipsis",
-                      }}
-                    >
-                      {violation.bookTitle}
                     </TableCell>
                     <TableCell align="center">
                       {formatDate(violation.violationDate)}

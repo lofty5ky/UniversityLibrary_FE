@@ -162,7 +162,7 @@ const BookDetailPage = () => {
             component="img"
             src={`http://localhost:8080/api/images/${book.image}`}
             alt={book.title}
-            sx={{ width: "100%", height: "440px", borderRadius: 2 }}
+            sx={{ width: "320px", height: "320px", borderRadius: 2 }}
           />
         </Grid>
 
